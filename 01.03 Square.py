@@ -1,2 +1,2 @@
 number = float(input("Enter Number: "))
-print()
+print(number*number)

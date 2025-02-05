@@ -1,21 +1,16 @@
-seconds_in_a_minute = 60
-seconds_in_an_hour = seconds_in_a_minute * 60
-seconds_in_a_day = seconds_in_an_hour * 24
-seconds_in_a_year = seconds_in_a_day * 365
+total_seconds = int(input("Enter Length of Time in Seconds: "))
 
-total_seconds = int(input("Enter the length of time in seconds: "))
+years = total_seconds // 31536000 
+remaining_seconds = total_seconds % 31536000
 
-years = total_seconds // seconds_in_a_year
-remaining_seconds = total_seconds % seconds_in_a_year
+days = remaining_seconds // 86400 
+remaining_seconds = remaining_seconds % 86400
 
-days = remaining_seconds // seconds_in_a_day
-remaining_seconds %= seconds_in_a_day
+hours = remaining_seconds // 3600
+remaining_seconds = remaining_seconds % 3600
 
-hours = remaining_seconds // seconds_in_an_hour
-remaining_seconds %= seconds_in_an_hour
-
-minutes = remaining_seconds // seconds_in_a_minute
-remaining_seconds %= seconds_in_a_minute
+minutes = remaining_seconds // 60 
+remaining_seconds = remaining_seconds % 60
 
 seconds = remaining_seconds
 

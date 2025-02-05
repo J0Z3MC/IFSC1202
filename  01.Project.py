@@ -19,8 +19,8 @@ remaining_seconds %= seconds_in_a_minute
 
 seconds = remaining_seconds
 
-print("Years:", years)
-print("Days:", days)
-print("Hours:", hours)
-print("Minutes:", minutes)
-print("Seconds:", seconds)
+print(f"Years: {years}")
+print(f"Days: {days}")
+print(f"Hours: {hours}")
+print(f"Minutes: {minutes}")
+print(f"Seconds: {seconds}")

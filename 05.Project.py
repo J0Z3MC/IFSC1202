@@ -14,14 +14,14 @@ def is_special_number(n):
         digit = tmp % 10
         total = total + (digit ** digits)
         tmp = tmp // 10
-        if total > n:  # If total exceeds n, skip the rest of the loop
-            return False  # Skip checking further if the sum is already too large
+        if total > n:
+            return False  
     return total == n
 
 def find_special_numbers(start, end):
     print("Special Numbers between", start, "and", end)
     for num in range(start, end + 1):
-        if not is_special_number(num):  # Skip numbers that are not special
+        if not is_special_number(num):  
             continue
         print(num)
     print("Finished checking numbers!")

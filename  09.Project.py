@@ -3,7 +3,9 @@ import csv
 def load_distance_table(filename):
     with open(filename, newline='') as file:
         reader = csv.reader(file)
-        table = [row for row in reader]
+        table = []
+        for row in reader:
+            table.append(row)
     return table
 
 def print_distance_table(table):
@@ -24,7 +26,7 @@ def main():
     from_city = input("Enter From City: ").strip()
     to_city = input("Enter To City: ").strip()
     
-    city_names = table[0]  # First row contains column headers
+    city_names = table[0]
     row_index = find_index([row[0] for row in table], from_city)
     col_index = find_index(city_names, to_city)
     
